@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController" customModule="Trial" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="KTz-d5-nME"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSG-fc-gnR">
+                    <rect key="frame" x="15" y="35" width="346" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vej-aR-Now">
+                    <rect key="frame" x="5" y="71" width="365" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="aE1-hj-zlu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDE-i1-itr">
+                    <rect key="frame" x="15" y="186" width="345" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GSG-fc-gnR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="6T9-gH-6L6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uDE-i1-itr" secondAttribute="trailing" constant="15" id="80J-Qc-qne"/>
+                <constraint firstItem="vej-aR-Now" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="ATo-vA-b5k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GSG-fc-gnR" secondAttribute="trailing" constant="14" id="JPf-lS-I6I"/>
+                <constraint firstItem="vej-aR-Now" firstAttribute="top" secondItem="GSG-fc-gnR" secondAttribute="bottom" constant="15" id="Nif-S6-bIC"/>
+                <constraint firstItem="uDE-i1-itr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Tcb-tE-Pge"/>
+                <constraint firstItem="uDE-i1-itr" firstAttribute="top" secondItem="vej-aR-Now" secondAttribute="bottom" constant="15" id="ftO-UL-Fcv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vej-aR-Now" secondAttribute="trailing" constant="5" id="ubR-1r-lAi"/>
+                <constraint firstItem="GSG-fc-gnR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="yhc-8m-goI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
