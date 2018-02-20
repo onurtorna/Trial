@@ -2,5 +2,5 @@
 
 ### First project created by Onur Torna on GitHub
 
-_Just trying.._ 
+_Just trying..._ 
 
