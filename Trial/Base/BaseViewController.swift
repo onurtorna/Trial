@@ -13,14 +13,4 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-
-    private enum Const {
-        static let navigationBarHeight: CGFloat = 100.0
-        static let navigationBarTitleTopMargin: CGFloat = 10.0
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+class BaseViewController: UIViewController { }

@@ -15,11 +15,6 @@ import UIKit
 
 class CategorySelectionViewController: BaseViewController {
 
-    private enum Const {
-        static let tabBarItemOneSegueIdentifier = "tabBarItemOneSegue"
-        static let tabBarItemTwoSegueIdentifier = "tabBarItemTwoSegue"
-    }
-
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var containerView: UIView!
     private var containerSubview: UIView!
