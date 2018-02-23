@@ -44,8 +44,9 @@ final class LocalizationManager {
     /// Current language of the localization manager instance
     var currentLanguage: Language {
         didSet {
-            LocalizationManager.shared.bundle = LocalizationManager.updateBundle(with: currentLanguage)
-            // TODO: Post notification
+            bundle = LocalizationManager.updateBundle(with: currentLanguage)
+            locale = Locale(identifier: currentLanguage.localeIdentifier)
+            NotificationCenter.default.post(name: Global.NotificationIdentifier.localizationChange.name, object: nil)
         }
     }
 
@@ -59,6 +60,16 @@ final class LocalizationManager {
         currentLanguage = language
         bundle = LocalizationManager.updateBundle(with: language)
         locale = Locale(identifier: language.localeIdentifier)
+    }
+
+    /// Switches current selected language
+    func switchLanguage() {
+        switch currentLanguage {
+        case .English:
+            currentLanguage = .Turkish
+        case .Turkish:
+            currentLanguage = .English
+        }
     }
 
     // MARK: - Helpers

@@ -1,8 +1,8 @@
 //
-//  Global.swift
+//  Localizeable.swift
 //  Trial
 //
-//  Created by Onur Torna on 15/02/18.
+//  Created by Onur Torna on 23/02/18.
 //  Copyright (c) 2003-2018 Onur Torna Corp. All rights reserved.
 //
 //  Save to the extent permitted by law, you may not use, copy, modify,
@@ -11,16 +11,14 @@
 //  Any reproduction of this material must contain this notice.
 //
 
-import Foundation
+protocol Localizeable {
 
-enum Global {
+    /// Text to be localize
+    var localizeableText: String? { get set }
 
-    enum NotificationIdentifier: String {
-        case localizationChange = "LocalizationChangeNotification"
+    /// Localization key of the text
+    var localizationKey: String? { get set }
 
-        var name: Notification.Name {
-            return Notification.Name(rawValue: rawValue)
-        }
-    }
-
+    /// Related string table of the text
+    var stringTable: StringTable { get set }
 }

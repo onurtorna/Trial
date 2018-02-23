@@ -24,6 +24,8 @@
 		0C896466203319370076CCCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C896465203319370076CCCD /* AppDelegate.swift */; };
 		0C89646D203319370076CCCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C89646C203319370076CCCD /* Assets.xcassets */; };
 		0C8C66FD203AE31C008BD12D /* UIView+LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C66FC203AE31C008BD12D /* UIView+LayoutConstraints.swift */; };
+		0CCA4375204004FC00FAF0BD /* LocalizationChangeListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA4374204004FC00FAF0BD /* LocalizationChangeListening.swift */; };
+		0CCA43792040237A00FAF0BD /* Localizeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA43782040237A00FAF0BD /* Localizeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		0C89646C203319370076CCCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C896471203319370076CCCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8C66FC203AE31C008BD12D /* UIView+LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraints.swift"; sourceTree = "<group>"; };
+		0CCA4374204004FC00FAF0BD /* LocalizationChangeListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationChangeListening.swift; sourceTree = "<group>"; };
+		0CCA43782040237A00FAF0BD /* Localizeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,13 +156,14 @@
 		0C896464203319370076CCCD /* Trial */ = {
 			isa = PBXGroup;
 			children = (
-				0C462DF5203DB30B00EB1364 /* Localization */,
 				0C896465203319370076CCCD /* AppDelegate.swift */,
 				0C1884942035CF1900D69578 /* Global.swift */,
 				0C1884912035CCAE00D69578 /* Base */,
 				0C1884852035B44C00D69578 /* Storyboards */,
 				0C1884872035B78F00D69578 /* Scenes */,
 				0C8C66FB203AE2C6008BD12D /* Additions */,
+				0C462DF5203DB30B00EB1364 /* Localization */,
+				0CCA4373204004B100FAF0BD /* Protocols */,
 				0C1884862035B48E00D69578 /* Resources */,
 			);
 			path = Trial;
@@ -171,6 +176,15 @@
 				0C45CEE1203EEF5400A2D9EE /* String+Additions.swift */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		0CCA4373204004B100FAF0BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0CCA4374204004FC00FAF0BD /* LocalizationChangeListening.swift */,
+				0CCA43782040237A00FAF0BD /* Localizeable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCA4375204004FC00FAF0BD /* LocalizationChangeListening.swift in Sources */,
 				0C108BD2203704CC00B0E896 /* AboutUsViewController.swift in Sources */,
+				0CCA43792040237A00FAF0BD /* Localizeable.swift in Sources */,
 				0C1884952035CF1900D69578 /* Global.swift in Sources */,
 				0C7C7527203D911A00B18988 /* LocalizationManager.swift in Sources */,
 				0C1884902035CA9100D69578 /* CategorySelectionViewController.swift in Sources */,
