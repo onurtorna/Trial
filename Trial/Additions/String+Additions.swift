@@ -11,3 +11,10 @@
 //  Any reproduction of this material must contain this notice.
 //
 
+extension String {
+
+    /// Makes string uppercased according to current selected locale
+    func toUppercase() -> String {
+        return self.uppercased(with: LocalizationManager.shared.locale)
+    }
+}
