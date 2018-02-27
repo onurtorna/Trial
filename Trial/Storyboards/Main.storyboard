@@ -26,12 +26,34 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwg-gI-lXL">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhe-e0-9fx">
+                                                        <rect key="frame" x="320" y="30" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="HAk-FK-QLv"/>
+                                                            <constraint firstAttribute="height" constant="40" id="o60-eW-h2g"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="titleShadowOffset" width="0.0" height="-1"/>
+                                                        <state key="normal" title="TR">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="languageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nW7-lH-jWd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.98131203651428223" green="0.34101784260623619" blue="0.25282248568451332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="dhe-e0-9fx" secondAttribute="trailing" constant="15" id="AXu-xj-Ncl"/>
+                                                    <constraint firstItem="dhe-e0-9fx" firstAttribute="centerY" secondItem="Xwg-gI-lXL" secondAttribute="centerY" id="URF-NI-Jpw"/>
                                                     <constraint firstAttribute="height" constant="100" id="iwh-78-lxA"/>
                                                 </constraints>
                                             </view>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-G9-tfl">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-G9-tfl" customClass="TRSegmentedControl" customModule="Trial" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="100" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.42673063987559512" green="0.89896819334554279" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -76,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="s9d-MU-XrU" id="AMm-t4-ujT"/>
+                        <outlet property="languageButton" destination="dhe-e0-9fx" id="Via-tp-afv"/>
                         <outlet property="segmentedControl" destination="7sF-G9-tfl" id="WgV-IH-GPA"/>
                     </connections>
                 </viewController>

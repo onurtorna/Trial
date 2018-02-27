@@ -13,10 +13,26 @@
 
 import UIKit
 
-class AboutUsViewController: UIViewController {
+class AboutUsViewController: BaseViewController {
+
+    override var localizeableViews: [Localizeable] {
+        return [first]
+    }
+
+    @IBOutlet weak var first: TRLabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = UIColor.brown
+    }
+
+    // MARK: - LocalizationChangeListening
+    override func setStringTableForLocalizeableViews() {
+        first.stringTable = StringTable.commons
+    }
+
+    override func setLocalizationKeysForLocalizeableViews() {
+        first.localizationKeys = ["aboutUs"]
     }
 }

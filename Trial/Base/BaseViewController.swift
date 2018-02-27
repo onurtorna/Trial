@@ -13,4 +13,23 @@
 
 import UIKit
 
-class BaseViewController: UIViewController { }
+class BaseViewController: UIViewController, LocalizationChangeListening {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activateLocalization()
+    }
+
+    var localizeableViews: [Localizeable] {
+        // Override in child classes
+        return []
+    }
+
+    func setStringTableForLocalizeableViews() {
+        // Implement in child classes
+    }
+
+    func setLocalizationKeysForLocalizeableViews() {
+        // Implement in child classes
+    }
+}

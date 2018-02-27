@@ -21,11 +21,14 @@
 		0C7C7524203D8AB300B18988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C7522203D8AB300B18988 /* LaunchScreen.storyboard */; };
 		0C7C7525203D8AB300B18988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C7523203D8AB300B18988 /* Main.storyboard */; };
 		0C7C7527203D911A00B18988 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C7526203D911A00B18988 /* LocalizationManager.swift */; };
+		0C80DC4920453D2900637D97 /* TRSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C80DC4820453D2900637D97 /* TRSegmentedControl.swift */; };
 		0C896466203319370076CCCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C896465203319370076CCCD /* AppDelegate.swift */; };
 		0C89646D203319370076CCCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C89646C203319370076CCCD /* Assets.xcassets */; };
 		0C8C66FD203AE31C008BD12D /* UIView+LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C66FC203AE31C008BD12D /* UIView+LayoutConstraints.swift */; };
 		0CCA4375204004FC00FAF0BD /* LocalizationChangeListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA4374204004FC00FAF0BD /* LocalizationChangeListening.swift */; };
+		0CCA43772040235600FAF0BD /* TRTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA43762040235600FAF0BD /* TRTextField.swift */; };
 		0CCA43792040237A00FAF0BD /* Localizeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA43782040237A00FAF0BD /* Localizeable.swift */; };
+		0CCA437B2040331000FAF0BD /* TRLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA437A2040331000FAF0BD /* TRLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,13 +47,16 @@
 		0C7C7522203D8AB300B18988 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C7C7523203D8AB300B18988 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0C7C7526203D911A00B18988 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		0C80DC4820453D2900637D97 /* TRSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRSegmentedControl.swift; sourceTree = "<group>"; };
 		0C896462203319370076CCCD /* Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C896465203319370076CCCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C89646C203319370076CCCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C896471203319370076CCCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8C66FC203AE31C008BD12D /* UIView+LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraints.swift"; sourceTree = "<group>"; };
 		0CCA4374204004FC00FAF0BD /* LocalizationChangeListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationChangeListening.swift; sourceTree = "<group>"; };
+		0CCA43762040235600FAF0BD /* TRTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRTextField.swift; sourceTree = "<group>"; };
 		0CCA43782040237A00FAF0BD /* Localizeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizeable.swift; sourceTree = "<group>"; };
+		0CCA437A2040331000FAF0BD /* TRLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				0C1884922035CCD800D69578 /* BaseViewController.swift */,
+				0CCA43762040235600FAF0BD /* TRTextField.swift */,
+				0CCA437A2040331000FAF0BD /* TRLabel.swift */,
+				0C80DC4820453D2900637D97 /* TRSegmentedControl.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -268,10 +277,13 @@
 				0C1884952035CF1900D69578 /* Global.swift in Sources */,
 				0C7C7527203D911A00B18988 /* LocalizationManager.swift in Sources */,
 				0C1884902035CA9100D69578 /* CategorySelectionViewController.swift in Sources */,
+				0C80DC4920453D2900637D97 /* TRSegmentedControl.swift in Sources */,
+				0CCA43772040235600FAF0BD /* TRTextField.swift in Sources */,
 				0C8C66FD203AE31C008BD12D /* UIView+LayoutConstraints.swift in Sources */,
 				0C108BD820371AFF00B0E896 /* CategorySelectionViewControllerGenerator.swift in Sources */,
 				0C896466203319370076CCCD /* AppDelegate.swift in Sources */,
 				0C45CEE0203EE95C00A2D9EE /* StringTable.swift in Sources */,
+				0CCA437B2040331000FAF0BD /* TRLabel.swift in Sources */,
 				0C1884932035CCD800D69578 /* BaseViewController.swift in Sources */,
 				0C108BD42037052100B0E896 /* ContactUsViewController.swift in Sources */,
 				0C45CEE2203EEF5400A2D9EE /* String+Additions.swift in Sources */,

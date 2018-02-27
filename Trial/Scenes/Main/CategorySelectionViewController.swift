@@ -15,8 +15,18 @@ import UIKit
 
 class CategorySelectionViewController: BaseViewController {
 
-    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    private enum Const {
+        static let languageButtonCornerRadius: CGFloat = 3.0
+        static let languageButtonBorderWidth: CGFloat = 1.0
+    }
+
+    override var localizeableViews: [Localizeable] {
+        return  [segmentedControl]
+    }
+
+    @IBOutlet private weak var segmentedControl: TRSegmentedControl!
     @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var languageButton: UIButton!
     private var containerSubview: UIView!
 
     override func viewDidLoad() {
@@ -26,10 +36,32 @@ class CategorySelectionViewController: BaseViewController {
 
     private func setupUI() {
         changeSubviewOfContainerView()
+
+        languageButton.layer.borderWidth = Const.languageButtonBorderWidth
+        languageButton.layer.cornerRadius = Const.languageButtonCornerRadius
+        languageButton.layer.borderColor = UIColor.black.cgColor
     }
+
+    // MARK: - LocalizationChangeListening
+    override func setStringTableForLocalizeableViews() {
+        segmentedControl.stringTable = .commons
+    }
+
+    override func setLocalizationKeysForLocalizeableViews() {
+        segmentedControl.localizationKeys = ["aboutUs", "contactUs"]
+    }
+}
+
+// MARK: - Actions
+private extension CategorySelectionViewController {
 
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         changeSubviewOfContainerView(selectedSegmentIndex: sender.selectedSegmentIndex)
+    }
+
+    @IBAction func languageButtonTapped(_ sender: Any) {
+        LocalizationManager.shared.switchLanguage()
+        languageButton.setTitle(StringTable.commons.localized(key: "language"), for: .normal)
     }
 }
 
@@ -51,5 +83,3 @@ private extension CategorySelectionViewController {
         }
     }
 }
-
-

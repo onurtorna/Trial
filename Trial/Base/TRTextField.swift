@@ -1,5 +1,5 @@
 //
-//  Localizeable.swift
+//  TRTextField.swift
 //  Trial
 //
 //  Created by Onur Torna on 23/02/18.
@@ -11,15 +11,21 @@
 //  Any reproduction of this material must contain this notice.
 //
 
-/// Indicates an object can be localizeable
-protocol Localizeable {
+import UIKit
 
-    /// Texts to be localized
-    var localizeableTexts: [String]? { get set }
+class TRTextField: UITextField, Localizeable {
 
-    /// Localization keys of the object
-    var localizationKeys: [String]? { get set }
+    var stringTable: StringTable = .commons
 
-    /// Related string table of the text
-    var stringTable: StringTable { get set }
+    var localizationKeys: [String]?
+
+    var localizeableTexts: [String]? {
+        get {
+            return [text ?? ""]
+        }
+
+        set {
+            text = newValue?.first
+        }
+    }
 }

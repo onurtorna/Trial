@@ -13,9 +13,15 @@
 
 import UIKit
 
+/// Classes that conforms to this have objects that can be localized, thus listens to language change in application.
 protocol LocalizationChangeListening: class {
 
+    /// Localizeable views of the object
     var localizeableViews: [Localizeable] { get }
+
+    /// Activates the localization by setting values and registering for the notification
+    /// Calling only this function is enough for localization however, other functions should be implemented.
+    func activateLocalization()
 
     /// Register for localizations notification
     func registerForLocalizationNotification()
@@ -28,9 +34,6 @@ protocol LocalizationChangeListening: class {
 
     /// Sets localization keys for localizeable vies
     func setLocalizationKeysForLocalizeableViews()
-
-    /// Activates the localization by setting values and registering for the notification
-    func activateLocalization()
 }
 
 extension LocalizationChangeListening {
@@ -46,7 +49,12 @@ extension LocalizationChangeListening {
 
     func updateLocalization() {
         for var view in localizeableViews {
-            view.localizeableText = view.stringTable.localized(key: view.localizationKey)
+            guard let localizationKeys = view.localizationKeys else { return }
+            var localizedTexts: [String] = []
+            for key in localizationKeys {
+                localizedTexts.append(view.stringTable.localized(key: key))
+            }
+            view.localizeableTexts = localizedTexts
         }
     }
 
