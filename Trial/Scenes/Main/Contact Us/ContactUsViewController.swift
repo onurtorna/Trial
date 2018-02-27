@@ -13,7 +13,7 @@
 
 import UIKit
 
-class ContactUsViewController: UIViewController {
+class ContactUsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
